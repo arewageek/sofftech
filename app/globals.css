@@ -2,26 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+nav .active, nav a:hover{
+  color: #007BFF;
+  position: relative;
+  transition: all .4s;
+}
+nav .active::before, nav a:hover::before{
+  opacity: 1;
+  content: '';
+  border: 1.5px solid #007BFF;
+  width: 20px;
+  height: 1px;
+  position: absolute;
+  bottom: -5px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.cta-gradient{
+  background: linear-gradient(135deg, #007BFF, #0056b3);
+  color: #FFFFFF; 
+  padding: 10px 20px;
+  border: none; 
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all .5s;
+}
+.cta-gradient:hover {
+  background: linear-gradient(135deg, #0056b3, #007BFF);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.hero-span{
+  position: relative;
+}
+
+.hero-span:after{
+  content: '';
+  position: absolute;
+  margin: 0px 4px;
+  bottom:-5px;
+  left: 0;
+  border: #007BFF 1px solid;
+  width: 100px;
 }
