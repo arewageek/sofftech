@@ -27,6 +27,7 @@ nav .active::before, nav a:hover::before{
   cursor: pointer;
   font-weight: bold;
   transition: all .5s;
+  cursor: pointer;
 }
 .cta-gradient:hover {
   background: linear-gradient(135deg, #0056b3, #007BFF);
@@ -44,4 +45,31 @@ nav .active::before, nav a:hover::before{
   left: 0;
   border: #007BFF 1px solid;
   width: 100px;
+}
+.service-card{
+  overflow:hidden;
+  position: relative;
+}
+.service-card>div{
+  z-index: 1;
+}
+.service-card::after{
+  content: '';
+  background-color: #4D94FF;
+  position:absolute;
+  top: -10px;
+  left:-10px;
+  height: 30pt;
+  width: 30pt;
+  border-radius: 50%;
+  transition: all .4s;
+  z-index: 0;
+}
+
+.service-card:hover::after{
+  height:200%;
+  width:200%;
+  top:0;
+  left:0;
+  border-radius: 0;
 }

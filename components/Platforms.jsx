@@ -14,7 +14,7 @@ export const Platforms = () => {
     
     return (
         <div className='w-full px-5 md:px-[20%] py-12 relative overflow-x-hidden'>
-            <h3 className='text-secondary-200 font-bold text-8xl absolute top-10 left-2 uppercase md:left-[20%] md:ml-25 tracking-widest break-words'>
+            <h3 className='text-primary-200 opacity-20 font-bold text-8xl absolute top-10 left-2 uppercase md:left-[20%] md:ml-25 tracking-widest break-words'>
                 Plat<wbr />forms
             </h3>
             <h3 className='text-primary-200 font-bold text-[35pt] relative my-8'>
